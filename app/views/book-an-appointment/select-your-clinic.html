@@ -1,0 +1,113 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+{% import 'includes/form_macros.html' as form_macros %}
+
+{% block afterHeader %}
+  {% include "includes/service-headers/book-an-appointment.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Select your Clinic
+  </h1>
+    
+      <p class="lede">You have been referred for <strong>Knee Pain</strong> 
+and have <strong>3 clinics</strong> to choose from below.</p>
+    
+    
+    <div class="container-fluid">
+        <div class="row-fluid" style="padding:0 0 0 0;">
+            <div class="span4">
+                    <p >
+                        <a class=" button button-filter" href="find-new-appointment" style="color:#fff">Filter </a>
+                    </p>
+            </div>
+            <div class="span4">
+                    <p>
+                        <a class="button button-sort" href="check-details" style="color:#fff">Sort</a>
+                    </p>
+            </div>
+            <div class="span4">
+                    <p>
+                        <a class="button button-map" href="check-details" style="color:#fff">Map</a>
+                    </p>
+            </div>
+
+        </div>
+    </div>
+    
+           
+                
+                
+        <div class="clinicresult clickable-row" data-href='/book-an-appointment/select-appointment'>
+            
+                    <h1 style="font-size:20px;color:#231f20;">LGI Knee Clinic</h1>
+                    <p>Leeds General Infirmary, Leeds, LS1 3EX</p>
+            
+                        <div class="container-fluid" style="">
+                            <div class="row-fluid clinictextcentre">
+                                <div class="span4 clinicdiarybox">
+                    
+                                    <p style="font-size:12px;line-height:14px;margin-bottom:5px;"> Next Appointment</p>
+                                        <div class="clinicdiaryboxinner">
+                                            <h2 style="font-size:22px;">10</h2> Days
+                                        </div>
+                                </div>
+                                <div class="span3" style="padding-top:20px;">
+                                    <p>5 Miles<br />
+                                        from<br />
+                                    <a href="">LS2 4GH</a>
+                                    </p>
+                                </div>
+
+                                <div class="span3" style="padding-top:20px;">
+                                    <p style="margin-bottom:0px;">CQC Rating</p>
+                                        <div class="cqcimprove">
+                                            Requires Improvement</div>
+                                </div>
+
+                                <div class="span1" >
+                                    <p style="text-align:right;">
+                                        <img src="/public/images/arrow-line-forward.svg" height="120px" width="30px">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+        </div>
+
+
+  <!--<div class="grid-row">
+    <div class="column-third column-switch-right">
+
+
+    </div>
+    <!--<div class="column-two-thirds">
+
+      {% for appointment in appointments %}
+        {{
+          ui_element_macros.appointment_option({
+            link_url: 'confirm-appointment/' + appointment.uuid,
+            appointment_date: appointment.appointment_date,
+            appointment_time: appointment.appointment_time,
+            appointment_days_away: appointment.appointment_days_away,
+            avatar_img_path: '/public/images/' + appointment.practitioner.photo,
+            name: appointment.practitioner.name,
+            position: appointment.practitioner.role,
+            gender: appointment.practitioner.gender,
+            appointment_length: appointment.appointment_length,
+            appointment_type: appointment.appointment_type,
+            appointment_type_class: appointment.appointment_type_class
+          })
+        }}
+      {% endfor %}
+
+      <p>
+        or <a href="next-available-appointment">see next available appointment</a>
+      </p>
+    </div>-->
+  </div>
+
+</main>
+{% endblock %}

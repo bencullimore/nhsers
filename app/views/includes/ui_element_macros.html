@@ -1,5 +1,9 @@
 <!-- Appointment link block -->
 {% macro appointment_option(i) %}
+
+
+
+
   <div class="appointment-option">
 
     <!--
@@ -7,6 +11,63 @@
       In {{ i.appointment_days_away }} days’ time
     </div>
     -->
+
+      
+      
+      
+        <div class="practioner-details" style="border-bottom:2px #000 solid;padding-bottom:20px;margin-bottom:20px;">
+            
+                    <h1>{{ i.name }}</h1>
+            <p>        {{ i.position }}</p>
+            
+            
+      
+    <div class="container-fluid">
+        <div class="row-fluid" style="padding:0 0 0 0;text-align:center;">
+            <div class="span3" style="width:90px;background-color:#EFEFEF;padding:5px;text-align:center;">
+                    <p style="font-size:12px;"> Next Appointment</p>
+                        
+                <div style="background-color:#fff;">{{ i.position }}</div>
+            </div>
+            <div class="span3" style="width:75px;">
+                    <p>
+                        {{ i.gender }}<br />
+                        from<br />
+                        <a href="">LS2 4GH</a>
+                        
+                    </p>
+            </div>
+            <div class="span3" style="width:70px;">
+                    <p>CQC Rating</p>
+                <p style="background-color:red;">{{ i.name }}</p>
+                    
+            </div>
+            <div class="span1 " style="background-color:red;">
+                    <p>
+                        >
+                    </p>
+            </div>
+
+        </div>
+    </div>
+
+          
+          
+          
+          <!--{{ i.position }}, {{ i.gender }}-->
+      
+      
+      
+      
+      
+      </div>
+            
+
+
+      
+      
+      
+    <!--
 
     <div class="appointment-time">
       {% if i.appointment_date %}
@@ -84,10 +145,10 @@
       {% endif %}
     </div>
   </div>
-{% endmacro %}
+{% endmacro %}     -->
 
 <!-- Apointment confirmation block -->
-{% macro appointment_confirmation(i) %}
+<!--{% macro appointment_confirmation(i) %}
   <h2 class="heading-large">{{ i.appointment_date }} at {{ i.appointment_time }}</h2>
   <div class="appointment-confirmation">
     <img src="{{ i.avatar_img_path }}" class="appointment-confirmation__avatar">
@@ -130,5 +191,5 @@
       </a>
     </div>
     {% endif %}
-  </div>
+  </div>-->
 {% endmacro %}

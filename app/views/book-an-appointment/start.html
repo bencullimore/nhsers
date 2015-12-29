@@ -1,31 +1,63 @@
 {% extends 'templates/nhs_transaction_layout.html' %}
+{% import 'includes/form_macros.html' as form_macros %}
 
 {% block content %}
 
 <main id="content" role="main">
 
-	<h1 class="heading-xlarge">Book an appointment</h1>
+	<h1 class="heading-xlarge">Welcome to the NHS e-Referral Service</h1>
 
     <div class="text">
-
-      <p class="lede">
-        Use this service if you need to make an appointment with your GP or
-        another healthcare professional.
-      </p>
-
+    
+        
       <p>
-        You’ll need to know:
+        If you have been referred to a specialist by your GP, or already have an appointment, enter your details below to make, amend or cancel your appointment.
       </p>
 
-      <ul class="list-bullet">
-        <li>
-          The name of your GP practice.
-        </li>
-      </ul>
+        
+        <div style="background-color:#EFEFEF;padding:20px;">
+            
+            
+        
+            <form action="/" method="post" class="form">
 
-      <p>
-        <a class="button button-get-started" href="find-new-appointment">Start</a>
+      {{
+        form_macros.date_field({
+          label: 'Booking Reference Number',
+          hint_date: '0000 0000 0000',
+          id_prefix: 'dob-'
+        })
+      }}
+                
+                {{
+        form_macros.text_field({
+          id: 'name',
+          label: 'Year of Birth'
+        })
+      }}
+
+
+      {% include
+        "includes/forms/gp-practice.html"
+        with {
+          label: "Password"
+        }
+      %}
+
+
+  </form>
+        
+            <div>
+              <p>
+        <a class="button button-get-started" href="/book-an-appointment/home-screen">Log In</a>
       </p>
+            </div>
+            
+            
+            <p style="text-align:center;"><a href="">Forgot password?</a></p>
+        </div>
+        
+        
     </div>
 </main>
 

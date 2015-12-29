@@ -1,0 +1,57 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+{% import 'includes/form_macros.html' as form_macros %}
+<!--{% import 'includes/ui_element_macros.html' as ui_element_macros %}-->
+
+{% block content %}
+
+<main id="content" role="main">
+
+	<h1 class="heading-xlarge">Hello Matthew Smith</h1>
+
+    <div class="text">
+    
+        
+      <p class="lede">Referrals to Book</p>
+
+        
+        <div class="bookbox">
+            
+            <div class="bookboxtext">
+                <h1 style="font-size: 20px;">Referral for Knee Pain</h1>
+                <p>Referred by: Dr S Mills</p></div>
+            
+            <div style="text-align:center;">
+            
+    <div class="container-fluid">
+  <div class="row-fluid" style="padding:0 0 0 0;">
+    <div class="span6">
+                    <p >
+        <a class=" button button-cancel" href="find-new-appointment" style="color:#fff">Cancel Referral</a>
+      </p>
+    </div>
+    <div class="span6">
+                    <p>
+        <a class="button button-book" href="check-details" style="color:#fff">Book Appointment</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+            
+            </div>
+            
+            
+        
+            <div class="column-two-thirds">
+
+
+    </div>
+        
+
+        </div>
+        
+        
+    </div>
+</main>
+
+{% endblock %}

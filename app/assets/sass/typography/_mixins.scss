@@ -253,7 +253,7 @@ $max-widths: map-values($maxwidths);
       $baseline-shift: #{($get-size / 2 * (($lineheight * $rootsize / $get-size) - $cap-height)) / $rootsize + 0.00001};
       $baseline-push: #{$below - (($get-size / 2 * (($lineheight * $rootsize / $get-size) - $cap-height)) / $rootsize + 0.00001)};
 
-      margin-bottom: #{$baseline-push}rem;
+      //margin-bottom: #{$baseline-push}rem;
       padding-top: #{$baseline-shift}rem;
 
     } @else {

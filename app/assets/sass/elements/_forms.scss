@@ -16,7 +16,7 @@ fieldset {
 }
 
 .form-item-wrapper {
-  padding: 1rem 0 0 0;
+  padding: 0rem 0 0 0;
   @extend %contain-floats;
 }
 
@@ -25,7 +25,7 @@ fieldset {
   float: left;
   width: 100%;
   @extend %contain-floats;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .form-group-related {
@@ -84,9 +84,7 @@ fieldset {
   padding: 0 1rem;
   background-color: $white;
   border: 1px solid $nhs-black;
-  -webkit-box-shadow: inset 0px 0px 0px 2px $nhs-grey-2;
-  -moz-box-shadow: inset 0px 0px 0px 2px $nhs-grey-2;
-  box-shadow: inset 0px 0px 0px 2px $nhs-grey-2;
+
 
   // Disable webkit appearance and remove rounded corners
   -webkit-appearance: none;

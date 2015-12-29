@@ -1,0 +1,141 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+{% import 'includes/form_macros.html' as form_macros %}
+{% block afterHeader %}
+  {% include "includes/service-headers/book-an-appointment.html" %}
+{% endblock %}
+
+
+{% block content %}
+<main id="content" role="main">
+
+  <h1 class="heading-large" style="margin-bottom:10px;">
+    Select your Appointment
+  </h1>
+    
+        <div class="bookbox">
+            <h2 style="padding-bottom:0px;font-weight: bold;">LGI Knee Clinic</h2>
+            <p>Leeds General Infirmary, Leeds, LS1 3EX</p>
+            <div class="checkdetailsbox">
+                <p><strong>1 Mile</strong> from LS2 4GH</p>
+            </div>
+            
+            <div class="checkdetailsbox">
+                
+<p><strong>CQC Rating</strong> <span style="background-color:#ff9900;color:#fff;padding-left:5px;padding-right:5px;">Requires Improvement</span>
+                
+            </div>
+            
+        </div>
+    
+    
+    <div class="container-fluid">
+        <div class="row-fluid" style="padding:10px 0 10px 0;">
+            <div class="span6">
+                    <p >
+                        <a class=" button button-change" href="find-new-appointment" style="color:#231f20">Change<br /> Clinic</a>
+                    </p>
+                
+                
+            </div>
+            <div class="span6">
+<p >
+                        <a class=" button button-filter" href="find-new-appointment" style="color:#fff">Filter</a>
+                    </p>
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <table class="table table-striped">
+
+        
+        <tbody>
+  
+            <tr class='clickable-row' data-href='/book-an-appointment/review-appointment'>  
+            <td> <p style="margin: 0rem 0rem 0rem 0rem;">Wednesday <strong>25 November</strong> 2015</p></td>
+            <td> <p>9.00am</p></td>
+            <td> <p style="color:#0072C6;font-weight:700;font-size:2rem;">></td>            
+            </tr>
+
+            
+            <tr>
+            <td> <p style="margin: 0rem 0rem 0rem 0rem;">Thursday  <strong>3 December</strong> 2015</p></td>
+            <td> <p>12.00pm</p></td>
+            <td> <p style="color:#0072C6;font-weight:700;font-size:2rem;">></td>
+            </tr>
+            
+            <tr>
+            <td> <p style="margin: 0rem 0rem 0rem 0rem;">Friday  <strong>18 December</strong> 2015</p></td>
+            <td> <p>9.00am</p></td>
+            <td> <p style="color:#0072C6;font-weight:700;font-size:2rem;">></td>
+            </tr>
+            
+            <tr>
+            <td> <p style="margin: 0rem 0rem 0rem 0rem;">Friday  <strong>18 December</strong> 2015</p></td>
+            <td> <p>10.00am</p></td>
+            <td> <p style="color:#0072C6;font-weight:700;font-size:2rem;">></td>
+            </tr>
+            
+            <tr>
+            <td> <p style="margin: 0rem 0rem 0rem 0rem;">Wednesday  <strong>6 January </strong> 2016</p></td>
+            <td> <p>9.00am</p></td>
+            <td> <p style="color:#0072C6;font-weight:700;font-size:2rem;">></td>
+            </tr>
+            
+            <tr>
+            <td> <p style="margin: 0rem 0rem 0rem 0rem;">Wednesday  <strong>6 January </strong> 2016</p></td>
+            <td> <p>10.00am</p></td>
+            <td> <p style="color:#0072C6;font-weight:700;font-size:2rem;">></td>
+            </tr>
+            
+            
+            
+            
+            
+        
+        </tbody>
+        
+</table>
+    
+    
+    
+    
+    
+
+  <!--<div class="grid-row">
+    <div class="column-third column-switch-right">
+
+
+    </div>
+    <!--<div class="column-two-thirds">
+
+      {% for appointment in appointments %}
+        {{
+          ui_element_macros.appointment_option({
+            link_url: 'confirm-appointment/' + appointment.uuid,
+            appointment_date: appointment.appointment_date,
+            appointment_time: appointment.appointment_time,
+            appointment_days_away: appointment.appointment_days_away,
+            avatar_img_path: '/public/images/' + appointment.practitioner.photo,
+            name: appointment.practitioner.name,
+            position: appointment.practitioner.role,
+            gender: appointment.practitioner.gender,
+            appointment_length: appointment.appointment_length,
+            appointment_type: appointment.appointment_type,
+            appointment_type_class: appointment.appointment_type_class
+          })
+        }}
+      {% endfor %}
+
+      <p>
+        or <a href="next-available-appointment">see next available appointment</a>
+      </p>
+    </div>-->
+  </div>
+
+</main>
+{% endblock %}

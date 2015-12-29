@@ -2,7 +2,7 @@ module.exports = function(grunt){
   grunt.initConfig({
     // Clean
     clean: ['public'],
-
+      
     // Builds Sass
     sass: {
       dev: {
