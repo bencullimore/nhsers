@@ -1,0 +1,180 @@
+{% extends 'templates/nhs_content_layout.html' %}
+{% import 'includes/form_macros.html' as form_macros %}
+{% import 'includes/ui_element_macros.html' as ui_element_macros %}
+
+{% block content %}
+
+
+
+
+        
+
+        
+        
+    <header role="banner" id="global-header" style="background-color:#00A19B;">
+      <div class="header-container">
+          
+ <div class="container-fluid" style="padding: 0px;">
+  <div class="row-fluid">
+    <div class="span8" >
+      <h2 style="color:#fff;font-size:18px;padding-top:25px;">Filter Appointment</h2>
+    </div>
+    <div class="span4" >
+<a href="select-appointment" style="float:right;color:#fff;padding-top:1rem;padding-bottom:1rem;">
+          <img src="{{assetPath}}images/x_37x37.png" width="37px" height ="37px" alt="">
+            </a>
+    </div>
+
+  </div>
+</div>
+
+
+          
+          
+          
+          
+          
+
+
+
+      </div>
+    </header>
+
+<main id="content" role="main">
+
+ <div class="container-fluid">
+      <div class="row-fluid" style="padding:0 0 0 0;">
+        <div class="span6">
+                        <p class="close">
+            <a class="button button-cancel close" style="color:#fff;padding-top:1.5rem;">Reset filters</a>
+          </p>
+        </div>
+        <div class="span6">
+                        <p>
+            <a class="button button-book" style="color:#fff;padding-top:1.5rem;" class="is-closed animated fadeInLeft" data-toggle="offcanvas" href="select-appointment">Apply filters</a>
+          </p>
+        </div>
+
+      </div>
+</div>
+    
+<!--ACCORDION START-->
+    
+<!--WAITING TIME-->
+    
+    <dl class="accordion" style="background-color: #dee0e2;">
+
+
+        
+<!--CLINIC DAY-->
+        
+        <dt style="border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+            <a style="text-decoration:none;color:#000;">Clinic Day</a>
+        </dt>
+        <dd style="background-color:#fff;border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+            <div>
+              <div style="padding-bottom:2rem;">
+                <input id="Monday" type="radio" name="radio" value="1" checked="checked">
+                  <label for="Monday"><span><span></span></span>Monday</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="Tuesday" type="radio" name="radio" value="2">
+                  <label for="Tuesday"><span><span></span></span>Tuesday</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="Wednesday" type="radio" name="radio" value="3">
+                  <label for="Wednesday"><span><span></span></span>Wednesday</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="Thursday" type="radio" name="radio" value="4">
+                  <label for="Thursday"><span><span></span></span>Thursday</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="Friday" type="radio" name="radio" value="5">
+                  <label for="Friday"><span><span></span></span>Friday</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="Saturday" type="radio" name="radio" value="6">
+                  <label for="Saturday"><span><span></span></span>Saturday</label>
+              </div>
+                <div>
+                <input id="Sunday" type="radio" name="radio" value="7">
+                  <label for="Sunday"><span><span></span></span>Sunday</label>
+              </div>
+            </div>
+        </dd>
+        
+        
+<!--CLINIC TIME-->
+        
+        <dt style="border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+            <a style="text-decoration:none;color:#000;">Clinic Time</a>
+        </dt>
+        <dd style="background-color:#fff;border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+            <div>
+              <div style="padding-bottom:2rem;">
+                <input id="Morning" type="radio" name="radio" value="1" checked="checked">
+                  <label for="Morning"><span><span></span></span>Morning (8.00am - 11.59am)</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="Afternoon" type="radio" name="radio" value="2">
+                  <label for="Afternoon"><span><span></span></span>Afternoon (12.00pm - 3.59pm)</label>
+              </div>
+                <div>
+                <input id="Evening" type="radio" name="radio" value="3">
+                  <label for="Evening"><span><span></span></span>Evening (4.00pm - 8.00pm)</label>
+              </div>
+            </div>
+        </dd>
+        
+        
+
+        
+
+        
+
+        
+
+        
+        
+
+        
+
+        
+    </dl>    
+        
+
+
+    
+    
+    <!--ACCORDION END-->
+    
+    
+    
+
+
+    
+
+    
+    <script>
+        $(document).ready(function() {    
+           $('.accordion > dd').hide();
+           $('.accordion > dt > a').click(function(){
+                   $(this).parent().next().slideToggle()
+                          .siblings('.hide').slideUp();
+                   return false;
+           });
+            $('.close').click(function(){
+                $('.accordion .hide').slideUp();
+            });
+        });
+    </script>
+    
+    
+
+    
+    
+            
+</main>
+
+{% endblock %}

@@ -84,7 +84,7 @@
                  <p>Interpreter <a href="">[Remove]</a> </p>               
                 </div>
                 <div style="padding-top:1rem;">
-                 <p>Transport <a href="">[Remove]</a> </p>               
+                 <p id="remove">Transport <a id="remove" href="">[Remove]</a> </p>               
                 </div>
                 
             </div>
@@ -117,6 +117,15 @@
 
             
             </div>
+    
+    
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $( ".remove" ).click(function() {
+              $( "p" ).hide( "slow" );
+            });
+        </script>
+    
             
 </main>
 

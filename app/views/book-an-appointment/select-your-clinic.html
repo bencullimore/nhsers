@@ -15,25 +15,64 @@
       <p class="lede">You have been referred for <strong>Knee Pain</strong> 
 and have <strong>3 clinics</strong> to choose from below.</p>
     
+
+    
     
     <div class="container-fluid">
         <div class="row-fluid" style="padding:0 0 0 0;">
+
+
+
+            
             <div class="span4">
                     <p >
-                        <a class=" button button-filter" href="find-new-appointment" style="color:#fff">Filter </a>
+                        <a class="button button-filter" style="color:#fff" href="/book-an-appointment/filter-clinics">Filter </a>
                     </p>
             </div>
             <div class="span4">
-                    <p>
-                        <a class="button button-sort" href="check-details" style="color:#fff">Sort</a>
-                    </p>
-            </div>
-            <div class="span4">
-                    <p>
-                        <a class="button button-map" href="check-details" style="color:#fff">Map</a>
-                    </p>
-            </div>
+        <dl class="accordion">
 
+        <dt style="margin-left: 0px !important;">
+            <a class="button button-sort"  style="text-decoration:none;color:#fff;">Sort</a>
+        </dt>
+            
+            <div style="width:100%;position:absolute;display: none; left: 0px !important;">
+                    <dd style="background-color:#fff;border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+                        <div>
+                          <div style="padding-bottom:2rem;">
+                            <input id="Appointment" type="radio" name="radio" value="1" checked="checked">
+                              <label for="Appointment"><span>
+                                  <span></span></span>
+                                  Next Appointment (Soonest - Latest)</label>
+                          </div>
+                          <div style="padding-bottom:2rem;">
+                            <input id="Location" type="radio" name="radio" value="2">
+                              <label for="Location"><span>
+                                  <span></span></span>
+                                  Location (Nearest - Furthest)</label>
+                          </div>
+                          <div style="padding-bottom:2rem;">
+                            <input id="CQC" type="radio" name="radio" value="3">
+                              <label for="CQC">
+                                  <span><span></span></span>
+                                  CQC Rating (Outstanding - Inadequate)</label>
+                          </div>
+                        </div>
+                    </dd>
+
+            </div>
+                </dl>  
+
+        
+            </div>
+            <div class="span4">
+                    <p>
+                        <a class="button button-map" href="map-clinics" style="color:#fff">Map</a>
+                    </p>
+            </div>
+        
+
+                    
         </div>
     </div>
     
@@ -77,6 +116,10 @@ and have <strong>3 clinics</strong> to choose from below.</p>
 
         </div>
 
+    
+    
+
+
 
   <!--<div class="grid-row">
     <div class="column-third column-switch-right">
@@ -108,6 +151,18 @@ and have <strong>3 clinics</strong> to choose from below.</p>
       </p>
     </div>-->
   </div>
-
+          <script>
+        $(document).ready(function() {    
+           $('.accordion > dd').hide();
+           $('.accordion > dt > a').click(function(){
+                   $(this).parent().next().slideToggle()
+                          .siblings('.hide').slideUp();
+                   return false;
+           });
+            $('.close').click(function(){
+                $('.accordion .hide').slideUp();
+            });
+        });
+    </script>
 </main>
 {% endblock %}
