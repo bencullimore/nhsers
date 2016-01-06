@@ -318,3 +318,116 @@ input[type=radio]:not(old):checked +  label > span > span{
   //background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
   //background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
 }
+
+
+// SIDR buttons
+.sidr-class-button-cancel {
+  //padding-right: 0rem;
+  //background-image: url("/public/images/icon-button-cancel.svg");
+  //background-repeat: no-repeat;
+  //background-position: 92% 50%;
+  background-color: $nhs-websafe-red;
+    //padding-top:1.5rem;
+    //padding-bottom:2rem;
+  &:link,
+  &:hover,
+  &:focus,
+  &:visited{
+    background-color: $nhs-websafe-red;
+      font-weight: 700;
+  }
+}
+
+.sidr-class-button {
+  //@include box-sizing (border-box);
+  @include inline-block;
+  width: 100%;
+  height: 5rem;
+  line-height: 2rem;
+padding: 0.5rem 1rem 0rem 1rem;
+  border: 0;
+  //background-color: $nhs-blue;
+  cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+  color: $white;
+  @include border-radius(0);
+  -webkit-appearance: none;
+      font-weight: 700;
+
+  &:link,
+  &:hover,
+  &:focus,
+  &:visited{
+    color: $white;
+    //background-color: $nhs-blue;
+  }
+
+  /* to be fixed */
+  text-decoration: none !important;
+
+  @include media (tablet) {
+    //width: auto;
+  }
+}
+
+// Fix unwanted button padding in Firefox
+.sidr-class-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.sidr-class-button:focus {
+  outline: 3px solid $nhs-yellow;
+}
+
+// Disabled buttons
+.sidr-class-button[disabled="disabled"] {
+  background: $button-colour;
+}
+
+.sidr-class-button[disabled="disabled"]:focus {
+  outline: none;
+}
+
+.sidr td {
+    padding:10px;
+    background-color: #fff;
+}
+
+.sidr-class-button-book {
+  //padding-right: 0rem;
+  //background-image: url("/public/images/icon-button-cancel.svg");
+  //background-repeat: no-repeat;
+  //background-position: 92% 50%;
+  background-color: $nhs-green;
+      font-weight: 700;
+    //width: 100% ;
+    //padding-top:1.5rem;
+    //padding-bottom:2rem;
+
+  &:link,
+  &:hover,
+  &:focus,
+  &:visited{
+    background-color: $nhs-green;
+  }
+}
+
+
+.sidr dt {
+    
+    border-bottom:1px solid #000;
+    margin:0;
+    padding:2rem 1rem 2rem 1rem;
+    
+    
+}
+
+.sidr dd {
+    
+    background-color:#fff;
+    border-bottom:1px solid #000;
+    margin:0;
+    padding:2rem 1rem 2rem 1rem;
+}

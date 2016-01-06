@@ -19,33 +19,32 @@
             
             
         
-            <form action="/" method="post" class="form">
+ 
+<!-- Name -->
+<div class="form-item-wrapper">
+  <fieldset>
+    <div class="form-group">
+      <label class="form-label-bold" for="first-name">
+        Booking Reference Number
+      </label>
+      <input type="text" id="first-name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label class="form-label-bold" for="first-name">
+        Year of Birth
+      </label>
+      <input type="text" id="last-name" class="form-control" style="width: 150px;">
+    </div>
+    <div class="form-group">
+      <label class="form-label-bold" for="first-name">
+        Password
+      </label>
+      <input type="text" id="first-name" class="form-control">
+    </div>
+      
+  </fieldset>
+</div>
 
-      {{
-        form_macros.date_field({
-          label: 'Booking Reference Number',
-          hint_date: '0000 0000 0000',
-          id_prefix: 'dob-'
-        })
-      }}
-                
-                {{
-        form_macros.text_field({
-          id: 'name',
-          label: 'Year of Birth'
-        })
-      }}
-
-
-      {% include
-        "includes/forms/gp-practice.html"
-        with {
-          label: "Password"
-        }
-      %}
-
-
-  </form>
         
             <div>
               <p>

@@ -1,0 +1,121 @@
+{% extends 'templates/nhs_transaction_layout.html' %}
+{% import 'includes/form_macros.html' as form_macros %}
+
+{% block afterHeader %}
+  {% include "includes/service-headers/book-an-appointment.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+<main id="content" role="main">
+
+<a id="left-menu" >Left Menu</a> 
+<a id="right-menu" href="#right-menu">Right Menu</a>
+
+     
+    
+    
+<div id="filter-content" style="display:none;background-color:#fff;">
+    
+    
+    <div role="banner" id="global-header">
+      <div class="header-container">
+          <div class="container-fluid" style="padding: 0px;">
+                <div class="row-fluid">
+                    <div>
+                        <h2 style="color:#fff;font-size:18px;padding-top:25px;">Filter Clinics  <a href="select-your-clinic-test" style="float:right;color:#fff;padding-top:1rem;padding-bottom:1rem;"><img src="{{assetPath}}images/x_37x37.png" width="20px" height ="20px" alt=""></a></h2>
+                    
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div style="padding:0 0 0 0;">
+        
+          <table>
+          <tr>
+              <td style="padding:20px;"><p>
+            <a class="button button-cancel close" style="color:#fff;padding-top:1.5rem;padding-left: 20px !important; padding-right: 20px !important;">Reset filters</a></p>
+              </td>
+              <td><p>
+            <a class="button button-book" style="color:#fff;padding-top:1.5rem;" class="is-closed animated fadeInLeft" data-toggle="offcanvas" href="select-your-clinic">Apply filters</a>
+          </p></td>
+              </tr>
+          
+          </table>
+          
+          
+          
+          
+          <div>
+
+<!--Accordion Start-->              
+    <dl class="accordion" style="background-color: #dee0e2;">
+            <dt style="border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+                    <a style="text-decoration:none;color:#000;">Waiting Time</a>
+            </dt>
+        
+<dd style="background-color:#fff;border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
+            <div>
+              <div style="padding-bottom:2rem;">
+                <input id="100Days" type="checkbox" name="checkbox" value="1" checked="checked">
+                  <label for="100Days"><span><span></span></span>1 – 100 Days</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="150Days" type="checkbox" name="checkbox" value="2" checked="checked">
+                  <label for="150Days"><span><span></span></span>101 – 150 Days</label>
+              </div>
+              <div style="padding-bottom:2rem;">
+                <input id="200Days" type="checkbox" name="checkbox" value="2" checked="checked">
+                  <label for="200Days"><span><span></span></span>151 – 200 Days</label>
+              </div>
+              <div>
+                <input id="250Days" type="checkbox" name="checkbox" checked="checked" value="3">
+                  <label for="250Days"><span><span></span></span>201 – 250 Days</label>
+              </div>
+            </div>
+        </dd>    
+        
+    </dl>          
+              
+              
+              
+              
+        </div>
+        <div>
+                        
+        </div>
+
+      </div>
+    
+    
+    
+</div>
+    
+    
+    
+    
+    
+<script src="/public/javascripts/jquery.sidr.min.js"></script>    
+
+<script>
+$(document).ready(function() {
+    $('#left-menu').sidr({
+      name: 'filter-content',
+      source: '#filter-content'
+    });
+
+});
+</script>
+    
+
+    
+</main>
+
+
+{% endblock %}
