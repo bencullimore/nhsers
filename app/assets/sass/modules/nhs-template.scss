@@ -386,7 +386,7 @@ html,
     border-top:1px $grey-2 solid;
     border-bottom:1px $grey-2 solid;
     padding-bottom:20px;
-    margin-bottom:20px;
+    //margin-bottom:20px;
 }
 
 .clinictextcentre
@@ -517,7 +517,7 @@ html,
 }
 
 .cbp-spmenu a:hover {
-	background: #258ecd;
+	//background: #258ecd;
 }
 
 .cbp-spmenu a:active {
@@ -535,8 +535,8 @@ html,
 }
 
 .cbp-spmenu-vertical a {
-	border-bottom: 1px solid #258ecd;
-	padding: 1em;
+	//border-bottom: 1px solid #258ecd;
+	//padding: 1em;
 }
 
 .cbp-spmenu-horizontal {
@@ -563,11 +563,11 @@ html,
 /* Vertical menu that slides from the left or right */
 
 .cbp-spmenu-left {
-	left: -240px;
+	left: -270px;
 }
 
 .cbp-spmenu-right {
-	right: -240px;
+	right: -270px;
 }
 
 .cbp-spmenu-left.cbp-spmenu-open {
