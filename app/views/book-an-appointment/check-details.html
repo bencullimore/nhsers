@@ -48,22 +48,22 @@
                   <h1 style="font-size: 20px;color:#000;">Phone</h1>
                 
                     <div style="border-bottom:1px #dee0e2 solid;">
-                      <p>Home: 01484 123456 <a href="">[edit]</a> </p>               
+                      <p>Home: 01484 123456 <a data-toggle="modal" data-target="#telhome">[edit]</a> </p>               
                     </div>
                 
                     <div style="border-bottom:1px #dee0e2 solid;padding-top:1rem;">
-                      <p>Work: 01484 098765 <a href="">[edit]</a> </p>               
+                      <p>Work: 01484 098765 <a data-toggle="modal" data-target="#telwork">[edit]</a> </p>               
                     </div>
                 
                     <div style="padding-top:1rem;">
-                      <p>Mobile: 07805 876543 <a href="">[edit]</a> </p>               
+                      <p>Mobile: 07805 876543 <a data-toggle="modal" data-target="#telmob">[edit]</a> </p>               
                     </div>
                 </div>
 
                 <div style="border-bottom:1px #dee0e2 solid;padding-top: 20px !important;">
                   <h1 style="font-size: 20px;color:#000;">Email Address</h1>
                     <div>
-                      <p>matthew.smith<br />@btinternet.com <a href="">[edit]</a> </p>           
+                      <p style="word-wrap: break-word;">matthew.smith@btinternet.com <a data-toggle="modal" data-target="#email">[edit]</a> </p>           
                     </div>
                 </div>
 
@@ -114,24 +114,145 @@
                 
     
         
-    <div style="text-align:center;">
+    <div style="text-align:center;padding-top:10px;">
                 
-     
+     <p><strong>Help?</strong> If your personal details are incorrect, please contact your GP.</p>      
 
 
 
     <div>
                     <p>
-        <a class="button button-book" href="select-your-clinic" style="color:#fff;padding-top:1.5rem;">Book Appointment</a>
+        <a class="button button-book" href="select-your-clinic" style="color:#fff;padding-top:1.5rem;">Continue to next page</a>
       </p>
     </div>
 
 
-<p>Are your details incorrect? Click here</p>       
+ 
 
             
             </div>
     
+    
+
+<!-- Modal -->
+<div class="container">
+
+
+    
+    
+<!-- Modal CHANGE HOME TELEPHONE NUMBER START -->
+  <div class="modal fade" id="telhome" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit home telephone number</h4>
+
+        </div>
+        <div class=" " style="padding:20px;">
+            <div class="form-group" style="margin-bottom: 2rem;">
+    <input type="Home telephone number" class="form-control" id="telhome" placeholder="Home telephone number">
+  </div>
+        </div>
+        <div class="modal-footer" style="border-top:0px;">
+          <button type="button" class="button button-book" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    
+<!-- Modal CHANGE HOME TELEPHONE NUMBER END -->
+    
+<!-- Modal CHANGE Work TELEPHONE NUMBER START -->
+  <div class="modal fade" id="telwork" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit work telephone number</h4>
+
+        </div>
+        <div class=" " style="padding:20px;">
+            <div class="form-group" style="margin-bottom: 2rem;">
+    <input type="Work telephone number" class="form-control" id="telwork" placeholder="Work telephone number">
+  </div>
+        </div>
+        <div class="modal-footer" style="border-top:0px;">
+          <button type="button" class="button button-book" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    
+<!-- Modal CHANGE Work TELEPHONE NUMBER END -->
+    
+
+    
+<!-- Modal CHANGE Mobile TELEPHONE NUMBER START -->
+  <div class="modal fade" id="telmob" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit mobile telephone number</h4>
+
+        </div>
+        <div class=" " style="padding:20px;">
+            <div class="form-group" style="margin-bottom: 2rem;">
+    <input type="mobile telephone number" class="form-control" id="telmob" placeholder="Mobile telephone number">
+  </div>
+        </div>
+        <div class="modal-footer" style="border-top:0px;">
+          <button type="button" class="button button-book" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Modal CHANGE mobile TELEPHONE NUMBER END -->
+
+    
+    
+<!-- Modal CHANGE EMAIL START -->
+  <div class="modal fade" id="email" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit email address</h4>
+
+        </div>
+        <div class=" " style="padding:20px;">
+            <div class="form-group" style="margin-bottom: 2rem;">
+    <input type="email address" class="form-control" id="email" placeholder="Email address">
+  </div>
+        </div>
+        <div class="modal-footer" style="border-top:0px;">
+          <button type="button" class="button button-book" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Modal CHANGE EMAIL END -->
+
+    
+    
+    
+    
+    
+  
+</div>
     
       <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -153,6 +274,9 @@
             });
         });
     </script>
+
+    
+
             
 </main>
 
