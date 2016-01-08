@@ -431,3 +431,27 @@ padding: 0.5rem 1rem 0rem 1rem;
     margin:0;
     padding:2rem 1rem 2rem 1rem;
 }
+
+.button-postcode {
+//padding-right: 2rem;
+//background-image: url("/public/images/icon-triangle-open-black.svg");
+//background-repeat: no-repeat;
+//background-position: 92% 50%;
+  background-color: $nhs-white;
+    border: 0;
+      font-weight: 700;
+    //width: 100% ;
+    //padding-top:1.5rem;
+    //padding-bottom:2rem;
+    padding-left: 0px;
+    color:$nhs-blue;
+    text-decoration: underline;
+    
+
+  &:link,
+  &:hover,
+  &:focus,
+  &:visited{
+    background-color: $nhs-white;
+  }
+}
