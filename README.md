@@ -1,4 +1,4 @@
-# NHS.UK Alpha Prototyping Kit
+# NHS e-Referral Service Prototyping Kit
 
 This kit is adapted from the [GOV.UK prototyping kit.](https://github.com/alphagov/govuk_prototype_kit).
 
