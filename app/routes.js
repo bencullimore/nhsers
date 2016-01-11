@@ -84,8 +84,8 @@ module.exports = {
       app.get('check-details', function(req, res) {
     res.render('check-details', {title:"Check your Details"});
 });
-      app.get('login', function(req, res) {
-    res.render('/book-an-appointment/login', {title:"Login"});
+      app.get('login2', function(req, res) {
+    res.render('login2', {title:"Login"});
 });
       
       app.get('select-your-clinic', function(req, res) {
