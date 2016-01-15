@@ -22,6 +22,27 @@ $(document).ready(function(){
 	    }
 	});
 
+  // Filter Appointment
+
+  // Make Reset Filters button active
+  $('dl.accordion dd input[type="checkbox"]').change(function(){
+    $('dl.accordion dd input[type="checkbox"]').not(':checked').length > 0 ?
+      $('.cbp-spmenu-right .span6 .close').removeClass('close').addClass('reset-filters') :
+      $('.cbp-spmenu-right .span6 .reset-filters').removeClass('reset-filters').addClass('close');
+  });
+
+  // Reset filter button
+  $('.cbp-spmenu-right p > a.button-cancel').on('click', function(){
+    $('dl.accordion dd input[type="checkbox"]').not(':checked').trigger("click");
+  });
+
+  // Apply filter button
+  $('.cbp-spmenu-right p > a.button-book').on('click', function(){
+    $('#showRightPush').trigger("click");
+  });
+
+
+  // Clinic Day
   $('dl.accordion dd:eq(0) input[type="checkbox"]').change(function(){
     var dayOfWeek = $(this).attr('id');
     this.checked ?
@@ -32,6 +53,7 @@ $(document).ready(function(){
     $('.main table tr:visible:even, .main table tr:visible:even td').css('background-color','#eff3f5');
   });
 
+  // Clinic Time
   $('dl.accordion dd:eq(1) div:eq(0) input[type="checkbox"]').change(function(){
     $('.main table tr:odd').not(':hidden').css('background-color','#f9f9f9');
     $('.main table tr:even').not(':hidden').css('background-color','transparent');
@@ -69,6 +91,7 @@ $(document).ready(function(){
     $('.main table tr:visible:odd, .main table tr:visible:odd td').css('background-color','transparent');
     $('.main table tr:visible:even, .main table tr:visible:even td').css('background-color','#eff3f5');
   });
+  // END: Filter Appointment
 
 });
 
