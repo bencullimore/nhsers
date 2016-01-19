@@ -6,6 +6,7 @@ The kit provides a simple way to make interactive prototypes for NHS e-Referral 
 
 It's built on the [Express](http://expressjs.com/) framework and contains code adapted from these GOV.UK resources:
 
+- [NHS.UK Alpha template](https://github.com/nhsalpha/nhs_prototype_kit)
 - [GOV.UK template](https://github.com/alphagov/govuk_template)
 - [GOV.UK front end toolkit](https://github.com/alphagov/govuk_frontend_toolkit)
 - [GOV.UK elements](https://github.com/alphagov/govuk_elements)
@@ -31,7 +32,7 @@ Install Node.js (see requirements)
 #### Clone this repo
 
 ```
-git clone git@github.com:/nhsalpha/nhs_prototype_kit.git
+git clone git@github.com:bencullimore/nhsers.git
 
 ```
 
