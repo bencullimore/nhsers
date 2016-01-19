@@ -15,7 +15,7 @@
             
             
 <!-- HIDDEN SLIDE OUT FILTER START-->
-            <header role="banner" id="global-header" style="background-color:#0072C6;">
+            <header role="banner" id="global-header" style="background-color:#0072C6;padding-top: 10px !important; padding-bottom: 10px !important;margin-left: 0px !important; margin-right: 0px !important;">
               <div class="header-container">
                   <div class="container-fluid" style="padding: 0px;">
                         <div class="row-fluid">
@@ -141,34 +141,82 @@ Disabled Parking
         </dt>
         <dd style="background-color:#fff;border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
             <div>
-              <div style="padding-bottom:2rem;">
-                <input id="Monday" type="checkbox" name="checkbox" checked="checked" value="1" >
-                  <label for="Monday"><span><span></span></span>Monday</label>
-              </div>
-              <div style="padding-bottom:2rem;">
-                <input id="Tuesday" type="checkbox" name="checkbox" checked="checked" value="2">
-                  <label for="Tuesday"><span><span></span></span>Tuesday</label>
-              </div>
-              <div style="padding-bottom:2rem;">
-                <input id="Wednesday" type="checkbox" name="checkbox" checked="checked" value="3">
-                  <label for="Wednesday"><span><span></span></span>Wednesday</label>
-              </div>
-              <div style="padding-bottom:2rem;">
-                <input id="Thursday" type="checkbox" name="checkbox" checked="checked" value="4">
-                  <label for="Thursday"><span><span></span></span>Thursday</label>
-              </div>
-              <div style="padding-bottom:2rem;">
-                <input id="Friday" type="checkbox" name="checkbox" checked="checked" value="5">
-                  <label for="Friday"><span><span></span></span>Friday</label>
-              </div>
-              <div style="padding-bottom:2rem;">
-                <input id="Saturday" type="checkbox" name="checkbox" checked="checked" value="6">
-                  <label for="Saturday"><span><span></span></span>Saturday</label>
-              </div>
-                <div>
-                <input id="Sunday" type="checkbox" name="checkbox" checked="checked" value="7">
-                  <label for="Sunday"><span><span></span></span>Sunday</label>
-              </div>
+
+
+
+ <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="anyday" name="minor">
+          <label class="form-control-checkbox minor" for="anyday">
+            Any
+          </label>
+        </div>
+      </div>
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="monday" name="minor">
+          <label class="form-control-checkbox minor" for="monday" style="font-weight: normal;">
+            Monday
+          </label>
+        </div>
+      </div>
+
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="tuesday" name="minor">
+          <label class="form-control-checkbox minor" for="tuesday" style="font-weight: normal;">
+            Tuesday
+          </label>
+        </div>
+      </div>
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="wednesday" name="minor">
+          <label class="form-control-checkbox minor" for="wednesday" style="font-weight: normal;">
+            Wednesday
+          </label>
+        </div>
+      </div>
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="thursday" name="minor">
+          <label class="form-control-checkbox minor" for="thursday" style="font-weight: normal;">
+            Thursday
+          </label>
+        </div>
+      </div>
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="friday" name="minor">
+          <label class="form-control-checkbox minor" for="friday" style="font-weight: normal;">
+            Friday
+          </label>
+        </div>
+      </div>
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="saturday" name="minor">
+          <label class="form-control-checkbox minor" for="saturday" style="font-weight: normal;">
+            Saturday
+          </label>
+        </div>
+      </div>
+                
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="sunday" name="minor">
+          <label class="form-control-checkbox minor" for="sunday" style="font-weight: normal;">
+            Sunday
+          </label>
+        </div>
+      </div> 
+
             </div>
         </dd>
         
@@ -180,18 +228,32 @@ Disabled Parking
         </dt>
         <dd style="background-color:#fff;border-bottom:1px solid #000;margin:0;padding:2rem 1rem 2rem 1rem;">
             <div>
-              <div style="padding-bottom:2rem;">
-                <input id="Morning" type="checkbox" name="checkbox" checked="checked" value="1" checked="checked">
-                  <label for="Morning"><span><span></span></span>Morning (8.00am - 11.59am)</label>
-              </div>
-              <div style="padding-bottom:2rem;">
-                <input id="Afternoon" type="checkbox" name="checkbox" checked="checked" value="2">
-                  <label for="Afternoon"><span><span></span></span>Afternoon (12.00pm - 3.59pm)</label>
-              </div>
-                <div>
-                <input id="Evening" type="checkbox" name="checkbox" checked="checked" value="3">
-                  <label for="Evening"><span><span></span></span>Evening (4.00pm - 8.00pm)</label>
-              </div>
+                    <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="morning" name="minor">
+          <label class="form-control-checkbox minor" for="morning" style="font-weight: normal;">
+            Morning (8.00am - 11.59am)
+          </label>
+        </div>
+      </div> 
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="aft" name="minor">
+          <label class="form-control-checkbox minor" for="aft" style="font-weight: normal;">
+            Afternoon (12.00pm - 3.59pm)
+          </label>
+        </div>
+      </div> 
+                
+      <div class="form-item-wrapper">
+        <div class="form-group">
+          <input type="checkbox" id="eve" name="minor">
+          <label class="form-control-checkbox minor" for="eve" style="font-weight: normal;">
+            Evening (4.00pm - 8.00pm)
+          </label>
+        </div>
+      </div> 
             </div>
         </dd>
           
@@ -219,17 +281,17 @@ Disabled Parking
 			<header class="clearfix">
 
 			</header>
-			<div class="main">
+			<div class="main" style="padding-top: 20px;">
                 
 <!--MAIN CONTENT STARTS HERRRRREEEE-->      
                 
-  <h1 class="heading-large" style="margin-bottom:10px;">
+  <h1 class="heading-large" style="padding-top: 0px !important;margin-bottom:10px;">
     Select your Appointment
   </h1>
     
         <div class="bookbox">
-            <h2 style="padding-bottom:0px;font-weight: bold;line-height:25px;">Heart Failure - Cardiology - Leeds TH (Leeds Gen Inf) - RR8</h2>
-            <p style="margin-bottom: 0px !important;"><a style="color:#0072C6;text-decoration: underline;" id="showLeft">More information on this service</a></p>
+            <h2 style="padding-bottom:0px;font-weight: bold;line-height:28px;"><a style="color:#0072C6;" id="showLeft">Heart Failure - Cardiology - Leeds TH (Leeds Gen Inf) - RR8</a></h2>
+
             <p>Leeds General Infirmary, Leeds, LS1 3EX</p>
             <div class="checkdetailsbox" style="padding-bottom: 2px !important; padding-top: 10px !important;">
                 <p><strong>1 Mile</strong> from <button type="button" class="button-postcode" data-toggle="modal" data-target="#postcode">LS2 4GH</button></p>
@@ -238,7 +300,7 @@ Disabled Parking
             <div class="checkdetailsbox" style="padding-bottom: 5px !important; padding-top: 10px !important;">
                 
                 <p style="margin-bottom:0px;"><strong>CQC Rating</strong> <span style="background-color:#ff9900;color:#fff;padding-left:5px;padding-right:5px;">Requires Improvement</span></p>
-                            <p style="margin-bottom: 0px !important;"><a href="http://www.cqc.org.uk/content/ratings" style="color:#0072C6;text-decoration: underline;" >More information about CQC Ratings</a></p>
+                            <!--<p style="margin-bottom: 0px !important;"><a href="http://www.cqc.org.uk/content/ratings" style="color:#0072C6;text-decoration: underline;" >More information about CQC Ratings</a></p>-->
                 
             </div>
             
@@ -252,8 +314,8 @@ Disabled Parking
 
 
             
-            <div class="span6">
-        <dl class="accordion">
+        <!--<div class="span6">
+<dl class="accordion">
 
         <dt style="margin-left: 0px !important;">
             <a class="button button-change"  style="text-decoration:none;color:#231f20;">Change<br /> Clinic</a>
@@ -278,12 +340,12 @@ Disabled Parking
                     </dd>
 
             </div>
-                </dl> 
+                </dl>
                 
                 
-            </div>
+            </div> -->
 
-            <div class="span6">
+            <div >
                     <p>
                         <a class="button button-filter" id="showRight" style="color:#fff">Filter</a>
                     </p>
